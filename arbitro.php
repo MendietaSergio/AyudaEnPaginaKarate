@@ -17,13 +17,14 @@
 				
 	    </header>
 		<h3 id="UserConected">Conectado:</h3>
+		<!-- en el valor del input idUserConected, le puse como valor 2 para identificar el id del participante(sería el id que trae desde la base de datos) -->
 			<input id="idUserConected" hidden type="text" value="2">
-			<form id="evaluacion" action="backend.php" method="POST">
+			<form id="evaluacion">
 				<fieldset id="datos-competidor">
 					<legend> DATOS COMPETIDOR</legend>
 					<div>
 						<label for="nya">APELLIDO Y NOMBRE:</label><br>
-						<div id="nya">Nombre del competidor</div>	
+						<div id="nya">Nombre del competidor</div>
 					</div>
 					<div>
 						<label for="categoria">CATEGORIA:</label><br>
@@ -50,6 +51,9 @@
 					</fieldset>
 
 				</div>
+				<!-- le puse type="button", para que no refresque la página al hacerle click para enviar los datos,
+					 una vez que haga click, en JS hace el envío de datos por Ajax a el archivo "post.php". Y al mismo tiempo quedan anulados.
+					 Se le agrega el atributo 'disabled' para que no puedan clickear los botones -->
 				<div id="terminar">
 					<button type="button" id="nulo">VOTAR NULO</button>
 					<button type="button"  id="evaluar">EVALUAR</button>
